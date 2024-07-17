@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="result" value=0 readonly> <!--input field cant type anything-->
+        <div id="display">
+            <button  onclick="setscreen(7)">7</button>
+            <button  onclick="setscreen(8)">8</button>
+            <button  onclick="setscreen(9)">9</button>
+            <button  onclick="setoperator('/')" class="operator">/</button>
+            <button  onclick="setscreen(4)">4</button>
+            <button  onclick="setscreen(5)">5</button>
+            <button  onclick="setscreen(6)">6</button>
+            <button  onclick="setoperator('*')" class="operator">*</button>
+            <button  onclick="setscreen(1)">1</button>
+            <button  onclick="setscreen(2)">2</button>
+            <button  onclick="setscreen(3)">3</button>
+            <button onclick="setoperator('-')" class="operator">-</button>
+            <button  onclick="setscreen(0)">0</button>
+            <button onclick="clearScreen()">C</button>
+            <button onclick="_calculte()" id="equal">=</button>
+            <button onclick="setoperator('+')" class="operator" >+</button> <!--when click on the button it calls calculate function with + as the argument-->
+            <button >.</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
