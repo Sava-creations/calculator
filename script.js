@@ -1,35 +1,52 @@
-let num1,num2,_answer,_operator;
+
+let currentResult = 0;
+let currentInput = '';
+let currentOperator = null;
 
 function setscreen(num) {
-    if(document.getElementById('result').value!=0)
-        document.getElementById('result').value = document.getElementById('result').value +num;
-    else
+    if(document.getElementById('result').value!=0){
+        currentInput += num;
+        document.getElementById('result').value = currentInput;
+    }
+    else{
+        currentInput += num;
         document.getElementById('result').value = num;
+    }
 }
 
 function clearScreen(){
+    currentResult = 0;
+    currentInput = '';
+    currentOperator = null;
     document.getElementById('result').value = 0;
 }
 
 function setoperator(op) {
-    num1 = document.getElementById('result').value;
-    _operator = op;
-    document.getElementById('result').value = '';
-}
-function _calculate(){
-    num2=document.getElementById('result').value;
-    if(_operator=='+'){
-        _answer=Number(num1)+Number(num2);
+    if (currentResult!=0 && currentInput!='') {
+        _calculate();
     }
-   if(_operator=='-'){
-        _answer=Number(num1)-Number(num2);
-    }
-     if(_operator=='*'){
-        _answer=Number(num1)*Number(num2);
-    }
-    if(_operator=='/'){
-        _answer=Number(num1)/Number(num2);
+    if(currentInput!=''){
+        currentResult = Number(currentInput);//
+        currentInput = '';//
     }
     
-    document.getElementById('result').value = _answer;
+    currentOperator = op;//
+}
+
+function _calculate(){
+        let numer=Number(currentInput);
+        if(currentOperator=='+'){
+            currentResult += numer;
+        }
+        if(currentOperator=='-'){
+            currentResult -= numer;
+        }
+        if(currentOperator=='*'){
+            currentResult *= numer;
+        }
+        if(currentOperator=='/'){
+            currentResult /= numer;
+    }
+    document.getElementById('result').value = currentResult;
+    currentInput='';
 }
