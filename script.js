@@ -1,16 +1,21 @@
-
 let currentResult = 0;
 let currentInput = '';
 let currentOperator = null;
 
 function setscreen(num) {
-    if(document.getElementById('result').value!=0){
+    if (currentInput=='0' && num=='0') {
+        return; //Ends the function execution immediately
+    }
+    else if(document.getElementById('result').value!=0){
         currentInput += num;
         document.getElementById('result').value = currentInput;
     }
     else{
+        if(num=='.'){
+            currentInput='0';
+        }
         currentInput += num;
-        document.getElementById('result').value = num;
+        document.getElementById('result').value =currentInput;
     }
 }
 
@@ -25,12 +30,12 @@ function setoperator(op) {
     if (currentResult!=0 && currentInput!='') {
         _calculate();
     }
-    if(currentInput!=''){
-        currentResult = Number(currentInput);//
-        currentInput = '';//
+    else if(currentInput!=''){
+        currentResult = Number(currentInput);
+        currentInput = '';
     }
     
-    currentOperator = op;//
+    currentOperator = op;
 }
 
 function _calculate(){
@@ -49,4 +54,5 @@ function _calculate(){
     }
     document.getElementById('result').value = currentResult;
     currentInput='';
+    
 }
