@@ -2,6 +2,7 @@ let currentResult = 0;
 let currentInput = '';
 let currentOperator = null;
 let currentString='';
+// let equalPressed=false;
 
 function setscreen(num) {
     if (currentInput=='0' && num=='0') {
@@ -34,12 +35,16 @@ function clearScreen(){
 }
 
 function setoperator(op) {
+    // if (op=='='){
+    //     equalPressed=true;
+    // }
     // Check if the last character in currentString is an operator
     if (['+', '-', '*', '/'].includes(currentString.slice(-1))) {
         currentString = currentString.slice(0, -1); // Remove the last operator
     }
     if (currentResult!=0 && currentInput!='') {
         _calculate();
+    
     }
     else if(currentInput!=''){
         currentResult = Number(currentInput);
@@ -47,6 +52,10 @@ function setoperator(op) {
     }   
     currentOperator = op;
     currentString+=op;
+    // if(equalPressed){
+    //     currentString = '';
+    //     equalPressed=false;
+    // }
     document.getElementById('result').value = currentString;
 }
 
@@ -61,7 +70,7 @@ function _calculate(){
         if(currentOperator=='*'){
             currentResult *= numer;
         }
-        if(currentOperator=='/'){
+        if(currentOperator=='/') {
             currentResult /= numer;
     }
     currentResult = parseFloat(currentResult.toFixed(10)); // fix precision error by converting number to sring with 10 digits and then back to a number
