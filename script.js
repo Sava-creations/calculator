@@ -29,18 +29,16 @@ function clearScreen(){
 }
 
 function setoperator(op) {
-    if (currentInput===''){
+    if (document.getElementById('result').value=='0'){ //avoid showing operators without any digit
         return;
     }
-    // Check if the last character in currentString is an operator
-    if (['+', '-', '*', '/'].includes(currentString.slice(-1))) {
+    
+    if (['+', '-', '*', '/'].includes(currentString.slice(-1))) { // Check if the last character in currentString is an operator
         currentString = currentString.slice(0, -1); // Remove the last operator
     }
     if (currentResult!=0 && currentInput!='') {
         pendingOperation=true;
         _calculate();
-        
-    
     }
     else if(currentInput!=''){
         currentResult = Number(currentInput);
