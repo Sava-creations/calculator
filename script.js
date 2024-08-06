@@ -11,8 +11,9 @@ function setscreen(num) {
    if(currentInput.includes('.') && num=='.'){ // Prevent multiple decimal points
         return; 
     }
-    if (currentInput === '' && num === '.') {
-        currentInput = '0'; // Handle leading zero for decimal point
+    if (currentInput === '' && num === '.') {         // Handle leading zero for decimal point
+        currentInput= '0'; 
+        currentString='0';
     }
         currentInput += num;
         currentString += num;
@@ -28,6 +29,9 @@ function clearScreen(){
 }
 
 function setoperator(op) {
+    if (currentInput===''){
+        return;
+    }
     // Check if the last character in currentString is an operator
     if (['+', '-', '*', '/'].includes(currentString.slice(-1))) {
         currentString = currentString.slice(0, -1); // Remove the last operator
