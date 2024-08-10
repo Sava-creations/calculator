@@ -12,12 +12,12 @@ function setscreen(num) {
     }
         currentString += num;
         // document.getElementById('result').value = currentString;
-        document.getElementById('result').textContent = currentString;
+        document.getElementById('result').value= currentString;
 }
 
 function clearScreen(){
     currentString='';
-    document.getElementById('result').textContent = 0;
+    document.getElementById('result').value= 0;
 }
 
 function setoperator(op) {
@@ -29,13 +29,21 @@ function setoperator(op) {
         currentString = currentString.slice(0, -1); // Remove the last operator
     }
     currentString+=op;
-    document.getElementById('result').textContent= currentString;
+    document.getElementById('result'). value= currentString;
 }
 
+function brackets(){
+    if (currentString.includes('(')){
+        currentString+=')';
+    }else{
+        currentString+='(';
+    }
+    document.getElementById('result').value= currentString;
+}
 function _calculate(){
     let result=eval(currentString);
  
     result = parseFloat(result.toFixed(10)); // fix precision error by converting number to sring with 10 digits and then back to a number
-        document.getElementById('result').textContent = result;
+        document.getElementById('result').value = result;
         currentString = result.toString();
 }
