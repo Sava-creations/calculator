@@ -1,102 +1,108 @@
-body {
-    background-image: linear-gradient(45deg, #e0eafc, #5a8bd1); /* Softer, professional blue gradient background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
+
+*{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(45deg, #f0f1f2, #003366); 
     font-family: 'Roboto', Arial, sans-serif;
+    background-color: #aff01731;
+    display: flex;
+    align-items: center;
+    height:100vh;
+    justify-content: center;
 }
 
-#calculator {
-    background-color: #ffffff; /* Clean white background for the calculator */
+ #calculator {
+    background-color: #ffffff;
     border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle, lighter shadow for a softer look */
-}
-
-#display {
+    max-width: 550px;
+    overflow: hidden; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    /* display: grid;
+    align-items: center; */
+} 
+ #display {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
-}
+    
+} 
 
-#expression {
-    font-size: 20px;
-    color: #666666; /* Neutral medium gray for the expression text */
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-#result {
+ #result {
     width: 100%;
     font-size: 30px;
     font-weight: bold;
     padding: 20px;
     border: none;
     outline: none;
-    background-color: #f0f0f0; /* Soft gray background for the result display */
-    color: #333333; /* Dark gray text */
-    text-align: center;
-}
-
-button {
+    background-color: #f0f1f2; 
+    color: #333333; 
+    text-align: right;
+} 
+/* #expression{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: #f5f5f5; 
+    color: #333333; 
+    text-align: right;
+} */
+ button {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     font-size: 28px;
     font-weight: bold;
-    background-color: #555555; /* Professional dark gray for number buttons */
-    color: #ffffff; /* White text for contrast */
+    background-color:  #4a4a4a; 
+    color: #ffffff;
     border: none;
     cursor: pointer;
-}
+} 
 
 button:hover {
-    background-color: #444444; /* Darker gray on hover for visual feedback */
+    background-color:#333333; 
 }
 
 button:active {
-    background-color: #333333; /* Even darker gray on active for contrast */
+    background-color:#1a1a1a; 
 }
 
 .operator {
-    background-color: #007bff; /* Professional blue for operator buttons */
-    color: #ffffff; /* White text for contrast */
+    background-color: #005f73; 
 }
 
 .operator:hover {
-    background-color: #0069d9; /* Darker blue on hover for visual feedback */
+    background-color: #003d40; 
 }
 
 .operator:active {
-    background-color: #0056b3; /* Even darker blue on active for contrast */
+    background-color: #002e31; 
 }
 
 #equal {
-    background-color: #28a745; /* Professional green for the '=' button */
-    color: #ffffff; /* White text for contrast */
+    background-color: #00bfae; 
 }
 
 #equal:hover {
-    background-color: #218838; /* Darker green on hover for visual feedback */
+    background-color: #009e94;
 }
-
 #equal:active {
-    background-color: #1e7e34; /* Even darker green on active for contrast */
+    background-color:#007d71;
 }
-
 #clear {
-    background-color: #dc3545; /* Professional red for the clear button */
-    color: #ffffff; /* White text for contrast */
+    background-color:#e63946; 
 }
 
 #clear:hover {
-    background-color: #c82333; /* Darker red on hover for visual feedback */
+    background-color: #d62839;
 }
-
 #clear:active {
-    background-color: #bd2130; /* Even darker red on active for contrast */
-}
+    background-color:#a3001d;
+} 
