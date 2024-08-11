@@ -1,19 +1,19 @@
 body {
-    background-image: linear-gradient(45deg, #d9e5ef, #5ea9fa);
+    background-image: linear-gradient(45deg, #e0eafc, #5a8bd1); /* Softer, professional blue gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* 100% of viewport height */
+    min-height: 100vh; 
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
 }
 
 #calculator {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Clean white background for the calculator */
     border-radius: 15px;
     max-width: 500px;
     overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle, lighter shadow for a softer look */
 }
 
 #display {
@@ -23,6 +23,13 @@ body {
     padding: 10px;
 }
 
+#expression {
+    font-size: 20px;
+    color: #666666; /* Neutral medium gray for the expression text */
+    margin-bottom: 10px;
+    text-align: right;
+}
+
 #result {
     width: 100%;
     font-size: 30px;
@@ -30,8 +37,8 @@ body {
     padding: 20px;
     border: none;
     outline: none;
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333333; /* Dark grey text */
+    background-color: #f0f0f0; /* Soft gray background for the result display */
+    color: #333333; /* Dark gray text */
     text-align: center;
 }
 
@@ -41,36 +48,55 @@ button {
     border-radius: 50px;
     font-size: 28px;
     font-weight: bold;
-    background-color: #5c9dff; /* Light blue button */
-    color: #ffffff;
+    background-color: #555555; /* Professional dark gray for number buttons */
+    color: #ffffff; /* White text for contrast */
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #528fe0; /* Darker blue on hover */
+    background-color: #444444; /* Darker gray on hover for visual feedback */
 }
 
 button:active {
-    background-color: #4a7cc8; /* Even darker blue on active */
+    background-color: #333333; /* Even darker gray on active for contrast */
 }
 
 .operator {
-    background-color: #0077c2; /* Dark blue operator button */
+    background-color: #007bff; /* Professional blue for operator buttons */
+    color: #ffffff; /* White text for contrast */
 }
 
 .operator:hover {
-    background-color: #0061a0; /* Darker blue on hover */
+    background-color: #0069d9; /* Darker blue on hover for visual feedback */
 }
 
 .operator:active {
-    background-color: #00518a; /* Even darker blue on active */
+    background-color: #0056b3; /* Even darker blue on active for contrast */
 }
 
 #equal {
-    background-color: #4e94ff; /* Bluish button for '=' */
+    background-color: #28a745; /* Professional green for the '=' button */
+    color: #ffffff; /* White text for contrast */
 }
 
 #equal:hover {
-    background-color: #447fc8; /* Darker blue on hover */
+    background-color: #218838; /* Darker green on hover for visual feedback */
+}
+
+#equal:active {
+    background-color: #1e7e34; /* Even darker green on active for contrast */
+}
+
+#clear {
+    background-color: #dc3545; /* Professional red for the clear button */
+    color: #ffffff; /* White text for contrast */
+}
+
+#clear:hover {
+    background-color: #c82333; /* Darker red on hover for visual feedback */
+}
+
+#clear:active {
+    background-color: #bd2130; /* Even darker red on active for contrast */
 }
