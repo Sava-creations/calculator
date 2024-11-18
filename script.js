@@ -1,9 +1,13 @@
 let currentString='';
 
 function setscreen(num) {
-    if (currentString=='0' && num=='0') { 
-        return;                                                                                      //Ends the function execution immediately
+    if (currentString === '0' && num !== '.') {
+        currentString = '';                                                                          // Clear the leading zero
     }
+    if (currentString === '' && num === '0') {
+        return;                                                                                     //ends the func execution immediately
+    }
+    
    if(currentString.includes('.') && num=='.'){                                                      // Prevent multiple decimal points
         return; 
     }
