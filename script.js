@@ -58,18 +58,17 @@ function oneClear() {
 
 function _calculate(){
     try{
-    if(currentString[currentString.length - 1] === '%')
-        setpercent();
-    else{
-
-    let result=eval(currentString);
-    
-    result = parseFloat(result.toFixed(10));                                       // fix precision error by converting number to sring with 10 digits and then back to a number
-    document.getElementById('result').value = result;
-    currentString = result.toString();
-    }
+        if(currentString[currentString.length - 1] === '%')
+            setpercent();
+        else{
+            let result=eval(currentString);
+            result = parseFloat(result.toFixed(10));                                       // fix precision error by converting number to sring with 10 digits and then back to a number
+            document.getElementById('result').value = result;
+            currentString = result.toString();
+        }
     }
     catch(error){
         document.getElementById('result').value = 'Error';
         currentString = '';
-}}
+    }
+}
