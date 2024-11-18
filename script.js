@@ -2,12 +2,12 @@ let currentString='';
 
 function setscreen(num) {
     if (currentString=='0' && num=='0') { 
-        return;                                                                                     //Ends the function execution immediately
+        return;                                                                                      //Ends the function execution immediately
     }
-   if(currentString.includes('.') && num=='.'){                                                    // Prevent multiple decimal points
+   if(currentString.includes('.') && num=='.'){                                                      // Prevent multiple decimal points
         return; 
     }
-    if (currentString === '' && num === '.') {                                                    // Handle leading zero for decimal point
+    if (currentString === '' && num === '.') {                                                       // Handle leading zero for decimal point
         currentString='0';
     }
         currentString += num;
