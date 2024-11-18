@@ -28,7 +28,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
-    
 } 
 
  #result {
@@ -54,6 +53,9 @@ body {
     border: none;
     cursor: pointer;
 } 
+btn-img{
+    top:5000px;
+}
 
 button:hover {
     background-color:#333333; 
